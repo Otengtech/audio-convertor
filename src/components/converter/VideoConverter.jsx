@@ -98,7 +98,7 @@ export default function VideoConverter() {
     }, 200);
 
     try {
-      const response = await fetch("http://localhost:3001/extract-audio", {
+      const response = await fetch("https://server-uhlg.onrender.com/extract-audio", {
         method: "POST",
         body: formData,
       });

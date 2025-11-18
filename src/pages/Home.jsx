@@ -93,8 +93,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Converter Section */}
-      <VideoConverter />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600">

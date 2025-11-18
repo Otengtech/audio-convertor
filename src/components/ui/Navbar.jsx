@@ -12,6 +12,7 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'Converter', path: '/converter' },
     { name: 'Features', path: '/features' },
+    { name: 'Privacy', path: '/privacy' },
   ];
 
   return (
@@ -86,7 +87,7 @@ const Navbar = () => {
               <Link
                 to="/converter"
                 onClick={() => setIsOpen(false)}
-                className="btn-primary text-center flex items-center justify-center space-x-2"
+                className="btn-primary text-center flex items-center justify-center bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-2 rounded-full space-x-2"
               >
                 <Zap className="w-4 h-4" />
                 <span>Start Converting</span>

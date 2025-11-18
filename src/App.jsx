@@ -1,14 +1,16 @@
 // src/App.jsx (Updated)
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import CustomToaster from './components/ui/CustomToaster';
 import Navbar from './components/ui/Navbar';
 import Home from './pages/Home';
 import Converter from './pages/Converter';
 import Features from './pages/Features';
 import Footer from './components/ui/Footer';
-import "./App.css"
+import "./App.css";
 import ScrollToTop from './components/ui/ScrollToTop';
+import PrivacyPolicy from './pages/Privacy';
+import TermsOfService from './pages/TermsOfService';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/converter" element={<Converter />} />
           <Route path="/features" element={<Features />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsOfService />} />
         </Routes>
         <Footer />
         <CustomToaster />

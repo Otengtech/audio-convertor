@@ -273,7 +273,7 @@ export default function VideoConverter() {
               <Video className="w-6 h-6 text-blue-600" />
             </div>
             <div className="overflow-hidden">
-              <p className="font-semibold text-gray-800 text-lg">{selectedFile.name}</p>
+              <p className="font-semibold text-gray-800 text-lg truncate max-w-full">{selectedFile.name}</p>
               <div className="flex items-center gap-4 mt-1 text-sm text-gray-600">
                 <span className="flex items-center gap-1">
                   <FileText className="w-4 h-4" />

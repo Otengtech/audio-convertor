@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
 import { Play, Download, Shield, Zap } from 'lucide-react';
 import VideoConverter from '../components/converter/VideoConverter';
+import HowToUse from '../components/ui/HowToUse';
 
 const Home = () => {
   const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -38,7 +39,7 @@ const Home = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <Link to="/converter" className="btn-primary text-lg px-8 py-4 flex items-center space-x-2">
+              <Link to="/converter" className="btn-primary bg-gradient-to-r from-purple-600 to-pink-600 text-lg text-white rounded-full px-8 py-3 flex items-center space-x-2">
                 <Play className="w-5 h-5" />
                 <span>Start Converting Free</span>
               </Link>
@@ -93,6 +94,7 @@ const Home = () => {
         </div>
       </section>
 
+      <HowToUse />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600">
@@ -120,7 +122,7 @@ const Home = () => {
           >
             <Link
               to="/converter"
-              className="bg-white text-purple-600 hover:bg-gray-100 font-semibold text-lg px-8 py-4 rounded-lg transition-colors duration-200 inline-flex items-center space-x-2"
+              className="bg-white text-purple-600 hover:bg-gray-100 font-semibold text-lg px-8 py-4 rounded-full transition-colors duration-200 inline-flex items-center space-x-2"
             >
               <Zap className="w-5 h-5" />
               <span>Convert Your First Video Free</span>

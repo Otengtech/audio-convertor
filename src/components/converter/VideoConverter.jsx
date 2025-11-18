@@ -17,6 +17,7 @@ import {
   Type,
   RotateCcw
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function VideoConverter() {
   // Load state from localStorage on 
@@ -208,19 +209,10 @@ export default function VideoConverter() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto bg-gradient-to-br from-white to-gray-50 shadow-2xl rounded-2xl p-8 border border-gray-100">
+    <div className="max-w-2xl mx-auto bg-gradient-to-br from-white to-gray-50 p-8 border border-gray-100">
       {/* Header */}
       <div className="text-center mb-8">
-        <div className="flex items-center justify-center gap-3 mb-4">
-          <div className="p-3 bg-blue-100 rounded-2xl">
-            <Video className="w-8 h-8 text-blue-600" />
-          </div>
-          <Zap className="w-6 h-6 text-yellow-500" />
-          <div className="p-3 bg-green-100 rounded-2xl">
-            <Music className="w-8 h-8 text-green-600" />
-          </div>
-        </div>
-        <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        <h1 className="text-4xl md:text-5xl font-bold text-gradient mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
           Video to Audio Converter
         </h1>
         <p className="text-gray-500 mt-2">Extract crystal clear audio from your videos</p>
@@ -229,7 +221,7 @@ export default function VideoConverter() {
       <div className="flex justify-between items-center mb-6">
         <div className="flex items-center gap-2 text-gray-600">
           <Settings className="w-5 h-5" />
-          <span className="font-medium">Converter Settings</span>
+          <Link to="/features" className="font-medium">Features</Link>
         </div>
         <button
           onClick={handleReset}
@@ -253,7 +245,7 @@ export default function VideoConverter() {
       {!selectedFile && (
         <div
           onClick={() => fileInputRef.current.click()}
-          className="border-3 border-dashed border-gray-300 rounded-2xl p-12 text-center hover:border-blue-400 hover:bg-blue-50 cursor-pointer transition-all duration-300 group"
+          className="border-3 border-dashed bg-blue-50 rounded-2xl p-12 text-center hover:border-blue-500 hover:bg-blue-50 cursor-pointer transition-all duration-300 group"
         >
           <div className="p-4 bg-blue-100 rounded-2xl inline-block group-hover:scale-110 transition-transform duration-300">
             <Upload className="w-12 h-12 text-blue-600 mx-auto" />
@@ -280,7 +272,7 @@ export default function VideoConverter() {
             <div className="p-3 bg-white rounded-xl shadow-sm">
               <Video className="w-6 h-6 text-blue-600" />
             </div>
-            <div>
+            <div className="overflow-hidden">
               <p className="font-semibold text-gray-800 text-lg">{selectedFile.name}</p>
               <div className="flex items-center gap-4 mt-1 text-sm text-gray-600">
                 <span className="flex items-center gap-1">

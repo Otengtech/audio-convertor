@@ -19,26 +19,15 @@ const Footer = () => {
             <p className="text-gray-400 mb-4">
               Extract high-quality audio from your videos instantly. Fast, secure, and completely free to use.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Github className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Mail className="w-5 h-5" />
-              </a>
-            </div>
           </div>
 
           {/* Product */}
           <div>
             <h3 className="font-semibold mb-4">Product</h3>
             <ul className="space-y-2">
+              <li><Link to="/" className="text-gray-400 hover:text-white transition-colors">Home</Link></li>
               <li><Link to="/converter" className="text-gray-400 hover:text-white transition-colors">Converter</Link></li>
               <li><Link to="/features" className="text-gray-400 hover:text-white transition-colors">Features</Link></li>
-              <li><Link to="/pricing" className="text-gray-400 hover:text-white transition-colors">Pricing</Link></li>
             </ul>
           </div>
 

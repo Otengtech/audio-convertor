@@ -20,8 +20,8 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
-              <Music className="w-5 h-5 text-white" />
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center">
+              <Music className="w-5 h-5 roun text-white" />
             </div>
             <span className="text-xl font-bold text-gradient">AudioExtract</span>
           </Link>
@@ -44,8 +44,8 @@ const Navbar = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Link to="/converter" className="btn-primary flex items-center space-x-2">
+          <div className="hidden md:flex items-center bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-2 rounded-full space-x-4">
+            <Link to="/converter" className="btn-primary text-white flex items-center space-x-2">
               <Zap className="w-4 h-4" />
               <span>Start Converting</span>
             </Link>

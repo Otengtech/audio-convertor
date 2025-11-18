@@ -69,7 +69,7 @@ const Features = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <section className="py-20 bg-white">
+      <section className="pt-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -99,7 +99,7 @@ const Features = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: index * 0.2 }}
-                className="card p-8 hover:shadow-lg transition-shadow duration-300"
+                className="card p-8 transition-shadow duration-300"
               >
                 <div className="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
                   <feature.icon className="w-7 h-7 text-purple-600" />
@@ -149,7 +149,7 @@ const Features = () => {
                 transition={{ delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">

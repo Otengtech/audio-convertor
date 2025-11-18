@@ -30,8 +30,7 @@ const Home = () => {
             className="text-center"
           >
             <h1 className="text-5xl md:text-7xl font-bold text-gradient mb-6">
-              Extract Audio from
-              <span className="block">Videos Instantly</span>
+              Extract Audio from Videos Instantly
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Convert MP4 to MP3 and other audio formats with crystal clear quality. 

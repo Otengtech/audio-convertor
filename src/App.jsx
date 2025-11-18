@@ -8,10 +8,12 @@ import Converter from './pages/Converter';
 import Features from './pages/Features';
 import Footer from './components/ui/Footer';
 import "./App.css"
+import ScrollToTop from './components/ui/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
         <Navbar />
         <Routes>

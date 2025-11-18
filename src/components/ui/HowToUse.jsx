@@ -133,7 +133,7 @@ const HowToUse = () => {
                 <button
                   key={step.title}
                   onClick={() => setCurrentStep(index)}
-                  className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+                  className={`px-4 md:px-6 py-2 md:py-3 rounded-xl font-medium transition-all duration-300 ${
                     currentStep === index
                       ? 'bg-purple-600 text-white shadow-md'
                       : 'text-gray-600 hover:text-purple-600 hover:bg-purple-50'

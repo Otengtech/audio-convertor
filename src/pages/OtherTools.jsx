@@ -205,7 +205,7 @@ const OtherTools = () => {
       </section>
 
       {/* Features Banner */}
-      <section className="py-12 bg-gradient-to-r from-purple-600 to-pink-600">
+      <section className="py-12 bg-gradient-to-r from-purple-600 to-pink-600 mt-4">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => (

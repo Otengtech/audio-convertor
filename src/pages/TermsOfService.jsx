@@ -183,30 +183,6 @@ const TermsOfService = () => {
               </div>
             </motion.div>
 
-            {/* Governing Law */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="card p-8"
-            >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                <Globe className="w-6 h-6 text-purple-600 mr-3" />
-                Governing Law
-              </h3>
-              <div className="space-y-4 text-gray-600">
-                <p>
-                  These Terms shall be governed and construed in accordance with the laws of the 
-                  United States, without regard to its conflict of law provisions.
-                </p>
-                <p>
-                  We reserve the right, at our sole discretion, to modify or replace these Terms 
-                  at any time. If a revision is material, we will provide at least 30 days' notice 
-                  prior to any new terms taking effect.
-                </p>
-              </div>
-            </motion.div>
-
             {/* Contact */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}

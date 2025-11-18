@@ -11,6 +11,7 @@ import "./App.css";
 import ScrollToTop from './components/ui/ScrollToTop';
 import PrivacyPolicy from './pages/Privacy';
 import OtherTools from './pages/OtherTools';
+import TermsOfService from './pages/TermsOfService';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/converter" element={<Converter />} />
           <Route path="/features" element={<Features />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsOfService />} />
           <Route path="/tools" element={<OtherTools />} />
         </Routes>
         <Footer />

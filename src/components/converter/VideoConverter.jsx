@@ -407,7 +407,7 @@ export default function VideoConverter() {
         <button
           onClick={handleConvert}
           disabled={!selectedFile || isConverting}
-          className="w-full mt-8 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-4 rounded-full disabled:from-gray-400 disabled:to-gray-500 disabled:cursor-not-allowed transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-[1.02] disabled:hover:scale-100"
+          className="w-full mt-8 px-5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-4 rounded-full disabled:from-gray-400 disabled:to-gray-500 disabled:cursor-not-allowed transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-[1.02] disabled:hover:scale-100"
         >
           {isConverting ? (
             <span className="flex justify-center items-center gap-3">
@@ -500,7 +500,7 @@ export default function VideoConverter() {
 
           <button
             onClick={handleDownload}
-            className="w-full mt-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 rounded-full flex items-center justify-center gap-3 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-[1.02]"
+            className="w-full mt-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 px-5 rounded-full flex items-center justify-center gap-3 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-[1.02]"
           >
             <Download className="w-6 h-6" />
             Download Audio File

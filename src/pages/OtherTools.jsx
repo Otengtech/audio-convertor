@@ -227,40 +227,6 @@ const OtherTools = () => {
         </div>
       </section>
 
-      {/* Category Filter */}
-      <section className="py-12 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="flex flex-wrap justify-center gap-4"
-          >
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setActiveCategory(category.id)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center space-x-2 ${
-                  activeCategory === category.id
-                    ? "bg-purple-600 text-white shadow-lg"
-                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                }`}
-              >
-                <span>{category.name}</span>
-                <span
-                  className={`text-sm px-2 py-1 rounded-full ${
-                    activeCategory === category.id
-                      ? "bg-white/20 text-white/90"
-                      : "bg-gray-200 text-gray-600"
-                  }`}
-                >
-                  {category.count}
-                </span>
-              </button>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
       {/* Tools Grid */}
       <section ref={ref} className="py-20">
         <div className="max-w-7xl mx-auto px-4">
@@ -329,25 +295,26 @@ const OtherTools = () => {
 
                   {/* Action Button */}
                   <div className="mt-auto">
-                    {tool.status === "coming-soon" ? (
-                      <button
-                        disabled
-                        className="w-full bg-gray-100 text-gray-400 py-3 rounded-lg font-medium text-sm cursor-not-allowed"
-                      >
-                        Coming Soon
-                      </button>
-                    ) : (
-                      <button className="w-full group/btn bg-gray-900 text-white py-3 rounded-lg font-medium text-sm hover:bg-purple-600 transition-all duration-300 flex items-center justify-center">
-                        <Link
-                          to={tool.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                    <Link
+                      to={tool.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {tool.status === "coming-soon" ? (
+                        <button
+                          disabled
+                          className="w-full bg-gray-100 text-gray-400 py-3 rounded-lg font-medium text-sm cursor-not-allowed"
                         >
+                          Coming Soon
+                        </button>
+                      ) : (
+                        <button className="w-full group/btn bg-gray-900 text-white py-3 rounded-full font-medium text-sm hover:bg-purple-600 transition-all duration-300 flex items-center justify-center">
                           {tool.status === "beta" ? "Try Beta" : "Use Tool"}
-                        </Link>
-                        <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                      </button>
-                    )}
+
+                          <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                        </button>
+                      )}
+                    </Link>
                   </div>
                 </div>
               </motion.div>

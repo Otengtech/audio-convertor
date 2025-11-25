@@ -217,6 +217,18 @@ export default function VideoConverter() {
     return qualities[bitrate] || "Better";
   };
 
+  function truncateFileName(name, maxLength = 10) {
+  if (!name) return "";
+  const dotIndex = name.lastIndexOf(".");
+  const ext = dotIndex !== -1 ? name.slice(dotIndex) : "";
+  const base = dotIndex !== -1 ? name.slice(0, dotIndex) : name;
+
+  if (base.length <= maxLength) return name; // No truncation needed
+
+  return base.slice(0, maxLength) + "..." + ext;
+}
+
+
   return (
     <div className="max-w-2xl mx-auto bg-gradient-to-br from-white to-gray-50 p-8 border border-gray-100 rounded-2xl shadow-sm">
       {/* Header */}
@@ -261,7 +273,7 @@ export default function VideoConverter() {
       {!selectedFile && (
         <div
           onClick={() => fileInputRef.current?.click()}
-          className="border-3 border-dashed border-blue-300 bg-blue-50 rounded-2xl p-12 text-center hover:border-blue-300 hover:bg-blue-100 cursor-pointer transition-all duration-300 group"
+          className="border-3 border-dashed border-blue-300 bg-blue-50 rounded-2xl p-12 text-center hover:border-blue-300 hover:bg-white cursor-pointer transition-all duration-300 group"
         >
           <div className="p-4 bg-blue-100 rounded-2xl inline-block group-hover:scale-110 transition-transform duration-300">
             <Upload className="w-12 h-12 text-blue-600 mx-auto" />
@@ -292,10 +304,10 @@ export default function VideoConverter() {
             </div>
             <div className="overflow-hidden max-w-full">
               <p
-                className="font-semibold text-gray-800 text-lg truncate"
-                title={selectedFile.name} // Shows full name on hover
+                className="font-semibold text-gray-800 text-lg"
+                title={selectedFile.name} // Full name on hover
               >
-                {selectedFile.name}
+                {truncateFileName(selectedFile.name, 10)}
               </p>
               <div className="flex items-center gap-4 mt-1 text-sm text-gray-600 flex-wrap">
                 <span className="flex items-center gap-1">
@@ -395,7 +407,7 @@ export default function VideoConverter() {
         <button
           onClick={handleConvert}
           disabled={!selectedFile || isConverting}
-          className="w-full mt-8 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-4 rounded-xl disabled:from-gray-400 disabled:to-gray-500 disabled:cursor-not-allowed transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-[1.02] disabled:hover:scale-100"
+          className="w-full mt-8 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-4 rounded-full disabled:from-gray-400 disabled:to-gray-500 disabled:cursor-not-allowed transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-[1.02] disabled:hover:scale-100"
         >
           {isConverting ? (
             <span className="flex justify-center items-center gap-3">

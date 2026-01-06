@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center">
                 <Music className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold">AudioExtract</span>
@@ -85,7 +85,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-700 mt-8 pt-8 flex justify-center items-center">
           <p className="text-gray-400 text-center text-sm">
             © 2024 AudioExtract. All rights reserved.
           </p>

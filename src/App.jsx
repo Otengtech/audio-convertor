@@ -1,6 +1,6 @@
 // src/App.jsx (Updated)
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import CustomToaster from './components/ui/CustomToaster';
 import Navbar from './components/ui/Navbar';
 import Home from './pages/Home';
@@ -15,7 +15,7 @@ import TermsOfService from './pages/TermsOfService';
 
 function App() {
   return (
-    <Router>
+    <>
       <ScrollToTop />
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
         <Navbar />
@@ -30,7 +30,7 @@ function App() {
         <Footer />
         <CustomToaster />
       </div>
-    </Router>
+    </>
   );
 }
 

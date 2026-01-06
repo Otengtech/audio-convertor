@@ -123,7 +123,7 @@ const HowToUse = () => {
         </div>
       </section>
 
-      {/* Step-by-Step Guide */}
+      {/* Step-by-Step Guid */}
       <section ref={ref} className="py-20">
         <div className="max-w-6xl mx-auto px-4">
           {/* Step Navigation */}

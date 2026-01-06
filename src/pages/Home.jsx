@@ -35,7 +35,7 @@ const Home = () => {
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Convert MP4 to MP3 and other audio formats with crystal clear quality. 
-              No registration required. Free forever.
+              No registration required.Very Fast and Free Forever.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -51,15 +51,15 @@ const Home = () => {
             {/* Trust Badges */}
             <div className="flex flex-wrap justify-center items-center gap-8 text-gray-500">
               <div className="flex items-center space-x-2">
-                <Shield className="w-5 h-5 text-green-500" />
+                <Shield className="w-5 h-5 text-pink-500" />
                 <span>100% Secure & Private</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Zap className="w-5 h-5 text-yellow-500" />
+                <Zap className="w-5 h-5 text-pink-500" />
                 <span>Lightning Fast</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Download className="w-5 h-5 text-blue-500" />
+                <Download className="w-5 h-5 text-pink-500" />
                 <span>No Watermarks</span>
               </div>
             </div>

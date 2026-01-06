@@ -32,14 +32,14 @@ const Features = () => {
     {
       icon: Settings,
       title: 'Advanced Controls',
-      description: 'Fine-tune your audio with professional-grade editing tools.',
+      description: 'Fine-tune your audio with professional-grade editing tools. This will be added soon.',
       features: ['Audio normalization', 'Noise reduction', 'EQ controls', 'Bitrate adjustment']
     },
     {
       icon: Cloud,
       title: 'Cloud Ready',
       description: 'Optional cloud processing for larger files and additional features.',
-      features: ['5GB file support', 'Cloud storage', 'Team collaboration']
+      features: ['5GB file support', 'Extract within seconds', 'Team collaboration']
     }
   ];
 
@@ -56,8 +56,8 @@ const Features = () => {
     },
     {
       icon: Users,
-      title: 'Team Features',
-      description: 'Collaborate with your team with shared workspaces and project management'
+      title: 'Fast Extraction',
+      description: 'Extraction of audio from video happens very fast with all audio formats'
     },
     {
       icon: BarChart3,
@@ -84,7 +84,7 @@ const Features = () => {
             transition={{ delay: 0.2 }}
             className="text-xl text-gray-600"
           >
-            Everything you need to extract, edit, and enhance audio from your videos
+            Everything you need to extracT audio from any video.
           </motion.p>
         </div>
       </section>
@@ -155,7 +155,7 @@ const Features = () => {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-600 text-left text-md">
                   {feature.description}
                 </p>
               </motion.div>

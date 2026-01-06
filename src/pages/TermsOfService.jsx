@@ -19,7 +19,6 @@ const TermsOfService = () => {
       icon: Users,
       title: 'User Responsibilities',
       items: [
-        'You must be at least 13 years old to use this service',
         'You are responsible for the files you upload and process',
         'Do not upload copyrighted content without permission',
         'Respect our service limits and fair usage policies'
@@ -67,18 +66,7 @@ const TermsOfService = () => {
           >
             Please read these terms carefully before using AudioExtract
           </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="text-sm text-gray-500 bg-gray-50 rounded-lg p-4 inline-block"
-          >
-            Effective: {new Date().toLocaleDateString('en-US', { 
-              year: 'numeric', 
-              month: 'long', 
-              day: 'numeric' 
-            })}
-          </motion.div>
+          
         </div>
       </section>
 
@@ -197,7 +185,7 @@ const TermsOfService = () => {
                 If you have any questions about these Terms of Service, please contact us:
               </p>
               <p className="text-purple-600 font-medium">
-                otengebenezer326@gmail.com
+                EMAIL: otengebenezer326@gmail.com
               </p>
             </motion.div>
           </div>
